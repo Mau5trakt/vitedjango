@@ -1,0 +1,26 @@
+{% load static %}
+{% load django_vite %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro Vite</title>
+    {% vite_hmr_client %}
+    {% vite_react_refresh %}
+    {% vite_asset 'assets/styles.css' %}
+
+
+
+</head>
+<body class="bg-emerald-700">
+    {% block content %}
+
+    {% endblock %}
+    <div id="root"> </div>
+
+{% vite_asset 'assets/hello.jsx' foo="bar" %}
+</body>
+</html>
